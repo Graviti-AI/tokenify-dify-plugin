@@ -25,6 +25,11 @@ The current model list with prices is at https://www.tokenify.dev/models/ and fr
 - Streaming and tool calling are supported.
 - Reasoning models return their reasoning in `reasoning_content`; reasoning tokens are billed at the output rate.
 
+## Requirements
+
+- A Tokenify API key (sign up at https://www.tokenify.dev/app/signup; usage is prepaid credit).
+- Outbound HTTPS from the Dify plugin runtime to `api.tokenify.dev`.
+
 ## Support
 
-support@tokenify.dev · Docs: https://www.tokenify.dev/docs/
+support@tokenify.dev · Docs: https://www.tokenify.dev/docs/ · Source: https://github.com/diffus-me/tokenify-dify-plugin
