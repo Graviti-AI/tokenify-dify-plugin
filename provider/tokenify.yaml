@@ -1,0 +1,115 @@
+provider: tokenify
+label:
+  en_US: Tokenify
+description:
+  en_US: DeepSeek V4 and GLM models through an OpenAI-compatible API. Endpoint https://api.tokenify.dev/v1.
+icon_small:
+  en_US: icon.svg
+icon_large:
+  en_US: icon.svg
+background: "#FFFFFF"
+help:
+  title:
+    en_US: Get your API key from Tokenify
+  url:
+    en_US: https://www.tokenify.dev/app/signup
+supported_model_types:
+  - llm
+configurate_methods:
+  - customizable-model
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Tokenify API key
+model_credential_schema:
+  model:
+    label:
+      en_US: Model Name
+    placeholder:
+      en_US: Model ID, for example deepseek/deepseek-v4-pro
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Tokenify API key
+    - variable: context_size
+      label:
+        en_US: Model context size
+      type: text-input
+      required: false
+      default: "1048576"
+      show_on:
+        - variable: __model_type
+          value: llm
+      placeholder:
+        en_US: Context window of the model (tokens)
+    - variable: max_tokens_to_sample
+      label:
+        en_US: Upper bound for max tokens
+      type: text-input
+      required: false
+      default: "32768"
+      show_on:
+        - variable: __model_type
+          value: llm
+    - variable: function_calling_type
+      show_on:
+        - variable: __model_type
+          value: llm
+      label:
+        en_US: Function calling
+      type: select
+      required: false
+      default: tool_call
+      options:
+        - value: tool_call
+          label:
+            en_US: Tool Call
+        - value: no_call
+          label:
+            en_US: Not Support
+    - variable: stream_function_calling
+      show_on:
+        - variable: __model_type
+          value: llm
+      label:
+        en_US: Stream function calling
+      type: select
+      required: false
+      default: supported
+      options:
+        - value: supported
+          label:
+            en_US: Support
+        - value: not_supported
+          label:
+            en_US: Not Support
+    - variable: vision_support
+      show_on:
+        - variable: __model_type
+          value: llm
+      label:
+        en_US: Vision support
+      type: select
+      required: false
+      default: no_support
+      options:
+        - value: support
+          label:
+            en_US: Support
+        - value: no_support
+          label:
+            en_US: Not Support
+extra:
+  python:
+    provider_source: provider/tokenify.py
+    model_sources:
+      - models/llm/llm.py

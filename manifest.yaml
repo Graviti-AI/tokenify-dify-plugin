@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: diffus-me
+repo: https://github.com/diffus-me/tokenify-dify-plugin
+contact: support@tokenify.dev
+name: tokenify
+label:
+  en_US: Tokenify
+description:
+  en_US: DeepSeek V4 and GLM models through an OpenAI-compatible API, with pay-per-token pricing and credit that never expires.
+icon: icon.svg
+privacy: PRIVACY.md
+network:
+  domains:
+    - api.tokenify.dev
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+plugins:
+  models:
+    - provider/tokenify.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-10-02T00:00:00.000000+00:00
+verified: false
