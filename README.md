@@ -32,4 +32,4 @@ The current model list with prices is at https://www.tokenify.dev/models/ and fr
 
 ## Support
 
-support@tokenify.dev · Docs: https://www.tokenify.dev/docs/ · Source: https://github.com/diffus-me/tokenify-dify-plugin
+support@tokenify.dev · Docs: https://www.tokenify.dev/docs/ · Source: https://github.com/Graviti-AI/tokenify-dify-plugin

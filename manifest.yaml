@@ -1,7 +1,7 @@
 version: 0.0.1
 type: plugin
-author: diffus-me
-repo: https://github.com/diffus-me/tokenify-dify-plugin
+author: graviti-ai
+repo: https://github.com/Graviti-AI/tokenify-dify-plugin
 contact: support@tokenify.dev
 name: tokenify
 label:
